@@ -22,8 +22,6 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: Test
         run: dotnet test --no-restore --verbosity normal
-      - name: Run
-        run: dotnet run --project ApiTest/ApiTest.csproj
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
